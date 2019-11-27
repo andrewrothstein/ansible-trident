@@ -1,0 +1,2 @@
+---
+trident_fq_exe: '{{ trident_install_dir }}/{{ trident_installer_name }}/extras/macos/bin/tridentctl'
