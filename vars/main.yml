@@ -1,10 +1,11 @@
 ---
 # vars file for trident
-trident_installer_name: trident-installer
-trident_ver_name: '{{ trident_installer_name }}-{{ trident_ver }}'
-trident_installer_tgz: '{{ trident_ver_name }}.tar.gz'
+
+trident_ver_name: 
+trident_installer_tgz: trident-installer-{{ trident_ver }}.tar.gz
 trident_url: '{{ trident_mirror }}/v{{ trident_ver }}/{{ trident_installer_tgz }}'
+trident_installer_tmp_tgz: /tmp/{{ trident_installer_tgz }}
 trident_checksum: '{{ trident_checksums[trident_ver] }}'
-trident_install_dir: '{{ trident_parent_install_dir }}/{{ trident_ver_name }}'
-trident_fq_exe: '{{ trident_install_dir }}/{{ trident_installer_name }}/tridentctl'
+trident_install_dir: '{{ trident_parent_install_dir }}/trident-{{ trident_ver }}'
+trident_fq_exe: '{{ trident_install_dir }}/trident-installer/tridentctl'
 trident_link: '{{ trident_parent_install_dir }}/bin/tridentctl'

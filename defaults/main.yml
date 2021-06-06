@@ -1,9 +1,11 @@
 ---
 # defaults file for trident
-trident_ver: '19.10.0'
+trident_ver: 21.04.0
 trident_mirror: https://github.com/NetApp/trident/releases/download
 trident_parent_install_dir: /usr/local
 
 trident_checksums:
   # https://github.com/NetApp/trident/releases/download/v19.10.0/trident-installer-19.10.0.tar.gz
   '19.10.0': sha256:8ff44977a4491c40d6c8d37a672e89af199b3c841575b3218c9eecdbc131363a
+  # https://github.com/NetApp/trident/releases/download/v21.04.0/trident-installer-21.04.0.tar.gz
+  '21.04.0': sha256:332fb06d57d46268115596d540e70ca39e79238faa9649d5518630eec19a6392

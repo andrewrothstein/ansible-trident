@@ -2,7 +2,7 @@ andrewrothstein.trident
 =========
 [![Build Status](https://travis-ci.org/andrewrothstein/ansible-trident.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-trident)
 
-Installs NetApp [trident](https://github.com/NetApp/trident).
+Installs NetApp [tridentctl](https://github.com/NetApp/trident/releases).
 
 Requirements
 ------------
@@ -25,8 +25,8 @@ Example Playbook
 ```yml
 - hosts: servers
   roles:
-        - andrewrothstein.trident
-    ```
+    - andrewrothstein.trident
+```
 
 License
 -------

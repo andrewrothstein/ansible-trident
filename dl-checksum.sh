@@ -2,6 +2,8 @@
 DIR=~/Downloads
 MIRROR=https://github.com/NetApp/trident/releases/download
 
+# https://github.com/NetApp/trident/releases/download/v21.04.0/trident-installer-21.04.0.tar.gz
+
 dl_ver()
 {
     local ver=$1
@@ -18,4 +20,4 @@ dl_ver()
     printf "  '%s': sha256:%s\n" $ver `sha256sum $lfile | awk '{print $1}'`
 }
 
-dl_ver ${1:-19.10.0}
+dl_ver ${1:-21.04.0}
