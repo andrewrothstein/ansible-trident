@@ -1,7 +1,6 @@
 ---
 # vars file for trident
 
-trident_ver_name: 
 trident_installer_tgz: trident-installer-{{ trident_ver }}.tar.gz
 trident_url: '{{ trident_mirror }}/v{{ trident_ver }}/{{ trident_installer_tgz }}'
 trident_installer_tmp_tgz: /tmp/{{ trident_installer_tgz }}

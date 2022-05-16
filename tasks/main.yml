@@ -10,14 +10,14 @@
       paths:
         - '{{ role_path }}/vars'
 - name: look for install in {{ trident_install_dir }}
-  become: yes
+  become: true
   stat:
     path: '{{ trident_install_dir }}'
   register: trident_binary
 - when: not trident_binary.stat.exists
   block:
     - name: downloading {{ trident_url }}...
-      become: yes
+      become: true
       become_user: root
       get_url:
         url: '{{ trident_url }}'
@@ -26,29 +26,29 @@
         mode: 0644
 
     - name: mkdir {{ trident_install_dir }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ trident_install_dir }}'
         state: directory
         mode: 0755
     - name: unarchive {{ trident_installer_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       unarchive:
-        remote_src: yes
+        remote_src: true
         src: '{{ trident_installer_tmp_tgz }}'
         dest: '{{ trident_install_dir }}'
         creates: '{{ trident_fq_exe }}'
   always:
     - name: rm {{ trident_installer_tmp_tgz }}
-      become: yes
+      become: true
       become_user: root
       file:
         path: '{{ trident_installer_tmp_tgz }}'
         state: absent
 - name: linking {{ trident_link }} to {{ trident_fq_exe }}
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ trident_fq_exe }}'
