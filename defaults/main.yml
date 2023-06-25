@@ -1,6 +1,6 @@
 ---
 # defaults file for trident
-trident_ver: 23.01.1
+trident_ver: 23.04.0
 trident_mirror: https://github.com/NetApp/trident/releases/download
 trident_parent_install_dir: /usr/local
 
@@ -15,3 +15,5 @@ trident_checksums:
   '22.07.0': sha256:e6b3ea4a3f947b42b91c32df8b9cc0287d6756a364688ea1ddb35cc244339d37
   # https://github.com/NetApp/trident/releases/download/v23.01.1/trident-installer-23.01.1.tar.gz
   '23.01.1': sha256:c145468798c9075e82bbf51adcc8aa42f8bb98840bdb259e602d006d536bbf51
+  # https://github.com/NetApp/trident/releases/download/v23.04.0/trident-installer-23.04.0.tar.gz
+  '23.04.0': sha256:52e18232b96a587319a301c116f625bb48b372b008e4ded33d470714b8454121
