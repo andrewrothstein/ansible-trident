@@ -1,8 +1,9 @@
 ---
-- include_role:
-    name: andrewrothstein.unarchive-deps
-- name: resolve platform specific vars
-  include_vars: '{{ item }}'
+- name: Installing andrewrothstein.unarchivedeps
+  ansible.builtin.include_role:
+    name: andrewrothstein.unarchivedeps
+- name: Resolve platform specific vars
+  ansible.builtin.include_vars: '{{ item }}'
   with_first_found:
     - files:
         - '{{ ansible_distribution }}-{{ ansible_distribution_release }}.yml'
@@ -11,48 +12,49 @@
       skip: true
       paths:
         - '{{ role_path }}/vars'
-- name: look for install in {{ trident_install_dir }}
+- name: Look for install in {{ trident_install_dir }}
   become: true
-  stat:
+  ansible.builtin.stat:
     path: '{{ trident_install_dir }}'
   register: trident_binary
-- when: not trident_binary.stat.exists
+- name: Downloading and installing tridentctl
+  when: not trident_binary.stat.exists
   block:
-    - name: downloading {{ trident_url }}...
+    - name: Downloading {{ trident_url }}...
       become: true
       become_user: root
-      get_url:
+      ansible.builtin.get_url:
         url: '{{ trident_url }}'
         dest: '{{ trident_installer_tmp_tgz }}'
         checksum: '{{ trident_checksum }}'
-        mode: 0644
+        mode: '644'
 
-    - name: mkdir {{ trident_install_dir }}
+    - name: Mkdir {{ trident_install_dir }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ trident_install_dir }}'
         state: directory
-        mode: 0755
-    - name: unarchive {{ trident_installer_tmp_tgz }}
+        mode: '755'
+    - name: Unarchive {{ trident_installer_tmp_tgz }}
       become: true
       become_user: root
-      unarchive:
+      ansible.builtin.unarchive:
         remote_src: true
         src: '{{ trident_installer_tmp_tgz }}'
         dest: '{{ trident_install_dir }}'
         creates: '{{ trident_fq_exe }}'
   always:
-    - name: rm {{ trident_installer_tmp_tgz }}
+    - name: Rm {{ trident_installer_tmp_tgz }}
       become: true
       become_user: root
-      file:
+      ansible.builtin.file:
         path: '{{ trident_installer_tmp_tgz }}'
         state: absent
-- name: linking {{ trident_link }} to {{ trident_fq_exe }}
+- name: Linking {{ trident_link }} to {{ trident_fq_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ trident_fq_exe }}'
     dest: '{{ trident_link }}'
     state: link
