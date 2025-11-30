@@ -1,6 +1,6 @@
 ---
 # defaults file for trident
-trident_ver: 24.06.0
+trident_ver: 25.10.0
 trident_mirror: https://github.com/NetApp/trident/releases/download
 trident_parent_install_dir: /usr/local
 
@@ -21,3 +21,23 @@ trident_checksums:
   '24.02.0': sha256:e2f9e6762e8967ea49f66a6e8f3ede865fdf9db3c8eacb3e0d52eaf5afc78673
   # https://github.com/NetApp/trident/releases/download/v24.06.0/trident-installer-24.06.0.tar.gz
   '24.06.0': sha256:dead67361c4fb7a3c82f1e3296a5024e8c2c4e4193d4ca8b9b12ec494d29bf78
+  # https://github.com/NetApp/trident/releases/download/v24.06.1/trident-installer-24.06.1.tar.gz
+  '24.06.1': sha256:638c9cd737d7fd21b2024277ce6fa4d96dc977e0f1abb6399094946ccd7099ce
+  # https://github.com/NetApp/trident/releases/download/v24.10.0/trident-installer-24.10.0.tar.gz
+  '24.10.0': sha256:10450f49c65f0079f6866dff9016a04c4db1ff5161a7b77c904b362c30c686f5
+  # https://github.com/NetApp/trident/releases/download/v24.10.1/trident-installer-24.10.1.tar.gz
+  '24.10.1': sha256:74a9750c1ac3ff029e78ce48ac87560ef42b5c020aacae3659ffc1fede872529
+  # https://github.com/NetApp/trident/releases/download/v25.02.0/trident-installer-25.02.0.tar.gz
+  '25.02.0': sha256:cbf3beca32abb73c5616a100e320cfb7abdaa9beb2398738a57037d28717e875
+  # https://github.com/NetApp/trident/releases/download/v25.02.1/trident-installer-25.02.1.tar.gz
+  '25.02.1': sha256:62683805e98071abd494776f49c400537577d3f2e191d3837fdf2939597a2554
+  # https://github.com/NetApp/trident/releases/download/v25.06.0/trident-installer-25.06.0.tar.gz
+  '25.06.0': sha256:84149ad5cbffac65a898a0cbcfe054e08bf8ea77ac5f02b3ab1e4eba0e3454eb
+  # https://github.com/NetApp/trident/releases/download/v25.06.1/trident-installer-25.06.1.tar.gz
+  '25.06.1': sha256:c3180dfe6602d8dd76a493258ce96e60006c23e4f40f479c17afdc48462587cf
+  # https://github.com/NetApp/trident/releases/download/v25.06.2/trident-installer-25.06.2.tar.gz
+  '25.06.2': sha256:e887179cc1fa356375e29fe3937d590497e589e1e2fe7384c4024265b2d5ca5a
+  # https://github.com/NetApp/trident/releases/download/v25.06.3/trident-installer-25.06.3.tar.gz
+  '25.06.3': sha256:46b0a381a176420057ccb29d933d4452e0ace95e015380c93a3ca9133624f341
+  # https://github.com/NetApp/trident/releases/download/v25.10.0/trident-installer-25.10.0.tar.gz
+  '25.10.0': sha256:0fe88a085ca81b9fb421853dad00287f6af803cfc678120ecca1dae7f5997a6a

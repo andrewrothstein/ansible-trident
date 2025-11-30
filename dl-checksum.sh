@@ -20,4 +20,13 @@ dl_ver()
     printf "  '%s': sha256:%s\n" $ver $(sha256sum $lfile | awk '{print $1}')
 }
 
-dl_ver ${1:-24.06.0}
+dl_ver 24.06.1
+dl_ver 24.10.0
+dl_ver 24.10.1
+dl_ver 25.02.0
+dl_ver 25.02.1
+dl_ver 25.06.0
+dl_ver 25.06.1
+dl_ver 25.06.2
+dl_ver 25.06.3
+dl_ver ${1:-25.10.0}
